@@ -1,38 +1,71 @@
-.App {
+.my-masonry-grid {
+  display: flex;
+  margin-left: -20px;
+}
+.my-masonry-grid_column {
+  border-left: 20px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements in <masonry> */
+  margin-bottom: 20px;
+}
+
+.my-masonry-grid_column > div > a {
+  display: block;
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
+  background: #ddd;
+}
+
+.my-masonry-grid_column > div > a:hover{
+  color: black;
+  background: #eee;
+}
+
+.character{
+  width: 100%;
+}
+
+.char_name{
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+/* nav tanımları */
+nav{
+  background-color: antiquewhite;
+}
+
+nav ul {
+  margin: 0 0 10px 0;
+  display: flex;
+  padding: 10px;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 5px;
+}
+
+/* Item tanımları */
+
+.quote_item {
+  padding: 10px 0 ;
+}
+
+.quotes_info {
+  padding: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Link kompanenti a tagı olarak render edilir. */
+.quote_item a{
+  text-decoration: none;
+  color: #333;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote_item a:hover{
+  text-decoration: underline;
 }
